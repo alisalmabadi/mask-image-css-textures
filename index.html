@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>title</title>
+		<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+	<!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-1.11.3.min.js"
+  integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js"></script>
+	<style type="text/css">
+	#aks2{
+		width: 180px;
+		height: 95px;
+		background:yellow;
+		mask-image:url(img/pic.png);
+		-webkit-mask-image:url(img/1.png);
+		margin-left: 40%;
+	}
+	.con-res{
+		-webkit-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
+		-moz-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
+		-ms-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
+		-o-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
+	}
+	  .margin {
+    margin-left: 34% !important;
+}
+.talaee{
+	background: gold;
+}
+.noghree{
+	background: silver;
+}
+.boronzi{
+	background: orange;
+}
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.talaee').click(function(){
+				$('#aks2').attr('src','img/gm1.jpg');
+			});
+		$('.noghree').click(function(){
+			$('#aks2').attr('src','img/silver.jpg');
+
+			});
+			$('.boronzi').click(function(){
+				$('#aks2').attr('src','img/bronze.jpg');
+			});
+		});
+	</script>
+
+</head>
+<body>
+<div class="container">
+<div class="row">
+        <div class="col-md-offset-5 col-sm-11">
+        	<div class="con-res">
+	<img id="aks2" src="img/gm1.jpg">
+</div>
+		</div>
+
+	<div class="btn btn-group margin">
+		<div class="btn-group">
+			<button class="btn btn-default talaee">gold</button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-default noghree">silver</button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-default boronzi">bronze</button>
+		</div>
+
+	</div>
+</div>
+</div>
+</body>
+</html>
