@@ -16,23 +16,46 @@
 	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.bundle.min.js"></script>
 	<style type="text/css">
-	#aks2{
-		width: 180px;
-		height: 95px;
-		background:yellow;
-		mask-image:url(img/pic.png);
-		-webkit-mask-image:url(img/1.png);
-		margin-left: 40%;
-	}
+	.title {
+    text-align: center;
+    padding: 5px;
+    background: #ffd70033;
+    width: 116px;
+    margin: 0 auto;
+    border: 1px solid #80808017;
+    border-radius: 100%;
+    height: 38px;
+    margin-bottom: 4%;
+    font-weight: bold;
+    box-shadow: 2px 3px 8px 5px #80808061;
+    animation-name: title;
+        animation-duration: 5s;
+    animation-direction: reverse;
+    animation-timing-function: ease-out;
+    animation-iteration-count:infinite;
+}
+
+@keyframes title{
+	0%{background: red;}
+	30%{background: yellow;}
+	50%{background: blue;}
+	70%{background: white;}
+		100%{background: gray;}
+
+}
+
+		  .margin {
+    margin-left: 36% !important;
+}
+
+
 	.con-res{
 		-webkit-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
 		-moz-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
 		-ms-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
 		-o-filter: drop-shadow(1px 1px 4px rgba(0,0,0,0.75));
 	}
-	  .margin {
-    margin-left: 34% !important;
-}
+
 .talaee{
 	background: gold;
 }
@@ -42,19 +65,68 @@
 .boronzi{
 	background: orange;
 }
+	/***PNG pluck *********/
+	#aks2{
+		width: 180px;
+		height: 95px;
+		background:yellow;
+		mask-image:url(img/1.png);
+		-webkit-mask-image:url(img/1.png);
+		margin-left: 42%;
+	}
+
+/*******svg************/
+
+#aks1{
+		width: 180px;
+		height: 95px;
+		background:yellow;
+			mask-image:url(img/svgpluck.svg);
+		-webkit-mask-image:url(img/svgpluck.svg);
+		margin-left: 42%;
+		mask-size": auto;
+       -webkit-mask-size: auto;
+       mask-repeat: no-repeat;
+       -webkit-mask-repeat: no-repeat;
+	}
+
+
+/***********svg**********/
 	</style>
 	<script type="text/javascript">
+		/***png****/
+
 	$(document).ready(function(){
-		$('.talaee').click(function(){
+		$('.pngt').click(function(){
 				$('#aks2').attr('src','img/gm1.jpg');
 			});
-		$('.noghree').click(function(){
+		$('.pngn').click(function(){
 			$('#aks2').attr('src','img/silver.jpg');
 
 			});
-			$('.boronzi').click(function(){
+			$('.pngb').click(function(){
 				$('#aks2').attr('src','img/bronze.jpg');
 			});
+		});
+
+/***svg****/
+		$(document).ready(function(){
+		$('.svgt').click(function(){
+				$('#aks1').attr('src','img/gm1.jpg');
+			});
+		$('.svgs').click(function(){
+			$('#aks1').attr('src','img/silver.jpg');
+
+			});
+			$('.svgb').click(function(){
+				$('#aks1').attr('src','img/bronze.jpg');
+			});
+		});
+
+		$(document).ready(function(){
+			$(document).ready(function(){
+  $('[data-toggle="popover"]').popover(); 
+});
 		});
 	</script>
 
@@ -63,20 +135,49 @@
 <div class="container">
 <div class="row">
         <div class="col-md-offset-5 col-sm-11">
+        	        	<div class="title">Png Pluck</div>
+
         	<div class="con-res">
-	<img id="aks2" src="img/gm1.jpg">
+	<img id="aks2" src="img/gm1.jpg" data-toggle="popover" title="main css property" data-content="just used <b>mask-image</b>" data-html="true">
 </div>
 		</div>
 
 	<div class="btn btn-group margin">
 		<div class="btn-group">
-			<button class="btn btn-default talaee">gold</button>
+			<button class="btn btn-default talaee pngt">gold</button>
 		</div>
 		<div class="btn-group">
-			<button class="btn btn-default noghree">silver</button>
+			<button class="btn btn-default noghree pngn">silver</button>
 		</div>
 		<div class="btn-group">
-			<button class="btn btn-default boronzi">bronze</button>
+			<button class="btn btn-default boronzi pngb">bronze</button>
+		</div>
+
+	</div>
+</div>
+</div>
+
+<div class="container">
+
+
+<div class="row">
+
+        <div class="col-md-offset-5 col-sm-11">
+        	<div class="title">SVG Pluck</div>
+        	<div class="con-res">
+	<img id="aks1" src="img/gm1.jpg" data-toggle="popover" title="differences" data-content="just used <b>mas-image-size </b> and <b>mask-image-repeat</b> property" data-html="true">
+</div>
+		</div>
+
+	<div class="btn btn-group margin">
+		<div class="btn-group">
+			<button class="btn btn-default talaee svgt">gold</button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-default noghree svgs">silver</button>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-default boronzi svgb">bronze</button>
 		</div>
 
 	</div>
